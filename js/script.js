@@ -30,4 +30,8 @@
 
   const year = document.querySelector('#year');
   if (year) year.textContent = new Date().getFullYear();
+
+  const productField = document.querySelector('#product-needed');
+  const requestedProduct = new URLSearchParams(window.location.search).get('product');
+  if (productField && requestedProduct) productField.value = requestedProduct;
 })();
